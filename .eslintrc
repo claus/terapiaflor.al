@@ -1,0 +1,14 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "parser": "babel-eslint",
+    "plugins": ["babel", "react"],
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "globals": {},
+    "rules": {
+        "no-empty": 0,
+        "react/display-name": 0
+    }
+}

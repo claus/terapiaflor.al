@@ -2,12 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import Header from '../components/header';
 
+import styles from './index.scss';
+
 export default () => (
-    <main>
+    <main className={styles.main}>
         <Header />
         <section>
             <Link href="/about">
-                <a>Go to About Me</a>
+                <a className={styles.link}>Go to About Me</a>
             </Link>
         </section>
     </main>

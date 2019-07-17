@@ -22,6 +22,7 @@
                     "styles": "./styles",
                     "utils": "./utils",
                     "hooks": "./hooks",
+                    "services": "./services",
                 }
             }
         ]

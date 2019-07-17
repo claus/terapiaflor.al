@@ -1,9 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
-import { Provider } from 'react-redux';
-import withRedux from 'next-redux-wrapper';
-import { makeStore } from 'store';
 
 class TerapiaFloralApp extends App {
     renderHead() {
@@ -24,16 +21,14 @@ class TerapiaFloralApp extends App {
     }
 
     render() {
-        const { Component, pageProps, store } = this.props;
+        const { Component, pageProps } = this.props;
         return (
             <Container>
                 {this.renderHead()}
-                <Provider store={store}>
-                    <Component {...pageProps} />
-                </Provider>
+                <Component {...pageProps} />
             </Container>
         );
     }
 }
 
-export default withRedux(makeStore)(TerapiaFloralApp);
+export default TerapiaFloralApp;

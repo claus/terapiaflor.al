@@ -16,6 +16,5 @@ module.exports = withPlugins(
     ],
     {
         target: 'serverless',
-        publicRuntimeConfig: false, //  TODO: remove this in 9.0.2
     }
 );

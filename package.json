@@ -1,4 +1,7 @@
 {
+  "description": "Daniela Wahlers - Terapeuta Floral",
+  "repository": "git@github.com:claus/terapiaflor.al.git",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next -p 3100",
     "now-build": "next build"

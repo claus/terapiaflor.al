@@ -9,9 +9,13 @@
     "react-dom": "16.8.6"
   },
   "devDependencies": {
+    "@babel/core": "7.5.4",
+    "@babel/preset-env": "7.5.4",
     "@zeit/next-sass": "0.2.1-canary.4",
     "@zeit/next-source-maps": "0.0.4-canary.1",
     "babel-eslint": "10.0.2",
+    "babel-plugin-module-resolver": "3.2.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "eslint": "6.0.1",
     "eslint-plugin-babel": "5.3.0",
     "eslint-plugin-react": "7.14.2",

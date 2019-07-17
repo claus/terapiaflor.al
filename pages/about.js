@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import Header from '../components/header';
+
+import Header from 'components/header';
 
 class AboutPage extends Component {
     render() {

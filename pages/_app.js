@@ -1,6 +1,7 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
+import Header from 'components/ui/Header';
 
 class TerapiaFloralApp extends App {
     renderHead() {
@@ -25,7 +26,10 @@ class TerapiaFloralApp extends App {
         return (
             <Container>
                 {this.renderHead()}
-                <Component {...pageProps} />
+                <main>
+                    <Header />
+                    <Component {...pageProps} />
+                </main>
             </Container>
         );
     }

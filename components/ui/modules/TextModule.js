@@ -6,11 +6,11 @@ import styles from './TextModule.scss';
 
 const TextModule = ({ title, text, whatsappButtonLabel }) => {
     return (
-        <div className={styles.textModule}>
-            <h3>{title}</h3>
+        <article className={styles.textModule}>
+            <h2>{title}</h2>
             {documentToReactComponents(text)}
             <button>{whatsappButtonLabel}</button>
-        </div>
+        </article>
     );
 };
 

@@ -10,10 +10,7 @@ import styles from './index.scss';
 
 const Landing = ({ landing }) => {
     return (
-        <section className={styles.index}>
-            <Link href="/about">
-                <a className={styles.link}>Go to About Me</a>
-            </Link>
+        <>
             {landing.modules.map(({ _contentTypeId, _id, ...props }) => {
                 switch (_contentTypeId) {
                     case 'bannerModule':
@@ -23,7 +20,10 @@ const Landing = ({ landing }) => {
                 }
                 return null;
             })}
-        </section>
+            <Link href="/about">
+                <a className={styles.link}>Go to About Me</a>
+            </Link>
+        </>
     );
 };
 

@@ -69,7 +69,8 @@ function cleanupContentfulData(data) {
     if (data.fields) {
         if (data.sys && data.sys.contentType && data.sys.contentType.sys) {
             // Perserve the content type id
-            data.fields.contentTypeId = data.sys.contentType.sys.id;
+            data.fields._contentTypeId = data.sys.contentType.sys.id;
+            data.fields._id = data.sys.id;
         }
         data = data.fields;
     }

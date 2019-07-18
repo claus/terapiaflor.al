@@ -2,37 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { fetchLanding } from 'services';
-import KeyHandler, { KEYPRESS } from 'react-key-handler';
+
+import BannerModule from 'components/ui/modules/BannerModule';
+import TextModule from 'components/ui/modules/TextModule';
 
 import styles from './index.scss';
 
-const Landing = ({ landing, etag }) => {
-    const handleKeyPress = event => {
-        event.preventDefault();
-        fetch(window.location, {
-            method: 'HEAD',
-            headers: { pragma: 'no-cache' },
-        }).then(res => {
-            if (res.ok) {
-                const etagNew = res.headers.get('x-version');
-                if (etag !== etagNew) {
-                    window.location.reload();
-                }
-            }
-        });
-    };
+const Landing = ({ landing }) => {
     return (
         <section className={styles.index}>
             <Link href="/about">
                 <a className={styles.link}>Go to About Me</a>
             </Link>
-            <pre>{etag}</pre>
-            <pre>{JSON.stringify(landing, null, 2)}</pre>
-            <KeyHandler
-                keyValue="r"
-                keyEventName={KEYPRESS}
-                onKeyHandle={handleKeyPress}
-            />
+            {landing.modules.map(({ _contentTypeId, _id, ...props }) => {
+                switch (_contentTypeId) {
+                    case 'bannerModule':
+                        return <BannerModule {...props} key={_id} />;
+                    case 'textModule':
+                        return <TextModule {...props} key={_id} />;
+                }
+                return null;
+            })}
         </section>
     );
 };

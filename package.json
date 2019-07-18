@@ -7,12 +7,13 @@
     "now-build": "next build"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "13.2.0",
+    "@contentful/rich-text-types": "13.1.0",
     "contentful": "7.8.2",
     "next": "9.0.2",
     "prop-types": "15.7.2",
     "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-key-handler": "1.2.0-beta.3"
+    "react-dom": "16.8.6"
   },
   "devDependencies": {
     "@babel/core": "7.5.4",

@@ -1,8 +1,8 @@
 import { createClient } from 'contentful';
 
 const Client = createClient({
-    space: 'cmila4ki2bhk',
-    accessToken: 'xwFLoe1j6Wtb0GkisyIB3lQkncXyWLXj3nQjADeq0lQ',
+    space: process.env.CF_SPACE_ID,
+    accessToken: process.env.CF_DELIVERY_TOKEN,
 });
 
 /**

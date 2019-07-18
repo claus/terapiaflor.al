@@ -16,5 +16,9 @@ module.exports = withPlugins(
     ],
     {
         target: 'serverless',
+        env: {
+            CF_SPACE_ID: process.env.CF_SPACE_ID,
+            CF_DELIVERY_TOKEN: process.env.CF_DELIVERY_TOKEN,
+        },
     }
 );

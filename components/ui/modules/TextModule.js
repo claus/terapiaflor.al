@@ -9,10 +9,12 @@ const TextModule = ({ title, text, whatsappButtonLabel, themeColor }) => {
         color: themeColor,
     };
     return (
-        <article className={styles.textModule}>
-            <h2 style={theme}>{title}</h2>
-            {documentToReactComponents(text)}
-            <a href="#" style={theme} className={styles.button}>
+        <article style={theme} className={styles.textModule}>
+            <div className={styles.textContainer}>
+                <h2 className={styles.headline}>{title}</h2>
+                {documentToReactComponents(text)}
+            </div>
+            <a href="#" className={styles.button}>
                 {whatsappButtonLabel}
             </a>
         </article>

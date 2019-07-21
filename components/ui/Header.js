@@ -3,9 +3,14 @@ import React from 'react';
 import styles from './Header.scss';
 
 const Header = () => (
-    <header>
+    <header className={styles.header}>
         <h1>
-            <img className={styles.logo} src="/static/logo.svg" />
+            <img
+                className={styles.logo}
+                src="/static/logo.svg"
+                role="img"
+                alt="Daniela Wahlers - Terapeuta Floral"
+            />
         </h1>
     </header>
 );

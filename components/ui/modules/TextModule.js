@@ -4,12 +4,15 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import styles from './TextModule.scss';
 
-const TextModule = ({ title, text, whatsappButtonLabel }) => {
+const TextModule = ({ title, text, whatsappButtonLabel, themeColor }) => {
+    const theme = {
+        color: themeColor,
+    };
     return (
         <article className={styles.textModule}>
-            <h2>{title}</h2>
+            <h2 style={theme}>{title}</h2>
             {documentToReactComponents(text)}
-            <button>{whatsappButtonLabel}</button>
+            <a href="#" style={theme}>{whatsappButtonLabel}</a>
         </article>
     );
 };
@@ -18,6 +21,7 @@ TextModule.propTypes = {
     title: PropTypes.string.isRequired,
     text: PropTypes.object.isRequired,
     whatsappButtonLabel: PropTypes.string.isRequired,
+    themeColor: PropTypes.string.isRequired,
 };
 
 export default TextModule;

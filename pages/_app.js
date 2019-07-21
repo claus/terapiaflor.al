@@ -1,3 +1,6 @@
+import './styles/normalize.scss';
+import './styles/theme.scss';
+
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';

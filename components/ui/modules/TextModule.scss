@@ -1,3 +1,15 @@
-.textModule {
+@import 'styles/fonts';
 
+.textModule {
+    font-family: $fontRobotoCondensed;
+    > h2 {
+        font-family: $fontAmatic;
+        font-weight: 400;
+        font-size: 48px;
+    }
+    > h3 {
+        font-family: $fontRobotoSlab;
+        font-weight: 400;
+        font-size: 16px;
+    }
 }

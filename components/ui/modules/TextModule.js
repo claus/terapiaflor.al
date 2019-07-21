@@ -12,7 +12,9 @@ const TextModule = ({ title, text, whatsappButtonLabel, themeColor }) => {
         <article className={styles.textModule}>
             <h2 style={theme}>{title}</h2>
             {documentToReactComponents(text)}
-            <a href="#" style={theme}>{whatsappButtonLabel}</a>
+            <a href="#" style={theme} className={styles.button}>
+                {whatsappButtonLabel}
+            </a>
         </article>
     );
 };

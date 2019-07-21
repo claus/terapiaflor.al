@@ -2,14 +2,14 @@
 
 .textModule {
     font-family: $fontRobotoCondensed;
-    > h2 {
+    h2 {
         font-family: $fontAmatic;
         font-weight: 400;
-        font-size: 48px;
+        font-size: 4.8rem;
     }
-    > h3 {
+    h3 {
         font-family: $fontRobotoSlab;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1.6rem;
     }
 }

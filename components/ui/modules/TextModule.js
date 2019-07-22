@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+import WhatsAppButton from 'components/ui/WhatsAppButton';
+
 import styles from './TextModule.scss';
 
 const TextModule = ({ title, text, whatsappButtonLabel, themeColor }) => {
@@ -14,9 +16,10 @@ const TextModule = ({ title, text, whatsappButtonLabel, themeColor }) => {
                 <h2 className={styles.headline}>{title}</h2>
                 {documentToReactComponents(text)}
             </div>
-            <a href="#" className={styles.button}>
-                {whatsappButtonLabel}
-            </a>
+            <WhatsAppButton
+                label={whatsappButtonLabel}
+                className={styles.button}
+            />
         </article>
     );
 };

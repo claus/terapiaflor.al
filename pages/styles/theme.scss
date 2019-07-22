@@ -3,12 +3,12 @@
 @import 'styles/breakpoints';
 
 @font-face {
-    font-family: 'Cookie';
+    font-family: 'Dancing Script';
     font-style: normal;
-    font-weight: 400;
-    src: local('Cookie-Regular'),
-        url('/static/fonts/cookie-regular.woff2') format('woff2'),
-        url('/static/fonts/cookie-regular.woff') format('woff');
+    font-weight: 700;
+    src: local('Dancing Script Bold'), local('DancingScript-Bold'),
+        url('/static/fonts/dancing-script-bold.woff2') format('woff2'),
+        url('/static/fonts/dancing-script-bold.woff') format('woff');
 }
 
 @font-face {

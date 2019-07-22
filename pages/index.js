@@ -3,14 +3,21 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { fetchLanding } from 'services';
 
+import PageMetadata from 'components/ui/PageMetadata';
 import BannerModule from 'components/ui/modules/BannerModule';
 import TextModule from 'components/ui/modules/TextModule';
 
 import styles from './index.scss';
 
 const Landing = ({ landing }) => {
+    const { title, description, image } = landing.metadata;
     return (
         <>
+            <PageMetadata
+                title={title}
+                description={description}
+                image={image}
+            />
             {landing.modules.map(({ _contentTypeId, _id, ...props }) => {
                 switch (_contentTypeId) {
                     case 'bannerModule':

@@ -14,13 +14,9 @@ class TerapiaFloralApp extends App {
                 <meta charSet="utf-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                <title>Daniela Wahlers — Terapeuta Floral</title>
                 <meta name="robots" content="index, follow" />
-                <meta name="description" content="Encontre cura e paz, sem sair de casa." />
-                <meta property="og:locale" content="pt-BR" />
+                <meta property="og:locale" content="pt_BR" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Daniela Wahlers — Terapeuta Floral" />
-                <meta property="og:description" content="Encontre cura e paz, sem sair de casa." />
                 <meta property="og:url" content="https://terapiaflor.al" />
                 <link rel="canonical" href="https://terapiaflor.al" />
                 <link rel="icon" href="/static/favicon-32.png" sizes="32x32" />

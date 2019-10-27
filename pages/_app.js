@@ -6,7 +6,34 @@ import App from 'next/app';
 import Head from 'next/head';
 import Header from 'components/Header';
 
+import { testIfSupportsPassive } from 'utils';
+
 class TerapiaFloralApp extends App {
+    componentDidMount() {
+        this.handleScroll();
+        this.supportsPassive = testIfSupportsPassive();
+        window.addEventListener(
+            'scroll',
+            this.handleScroll,
+            this.supportsPassive ? { passive: true } : false
+        );
+    }
+
+    componenWillUnmount() {
+        window.removeEventListener(
+            'scroll',
+            this.handleScroll,
+            this.supportsPassive ? { passive: true } : false
+        );
+    }
+
+    handleScroll = () => {
+        document.documentElement.style.setProperty(
+            '--scroll-top',
+            `${document.scrollingElement.scrollTop}px`
+        );
+    };
+
     renderHead() {
         return (
             // prettier-ignore

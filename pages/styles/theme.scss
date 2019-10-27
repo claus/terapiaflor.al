@@ -48,6 +48,10 @@
 }
 
 :global {
+    :root {
+        --scroll-top: 0;
+    }
+
     html {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;

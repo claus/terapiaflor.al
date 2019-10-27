@@ -1,12 +1,30 @@
+@import 'styles/fonts';
+@import 'styles/colors';
 @import 'styles/breakpoints';
 
 .bannerModule {
+    position: relative;
     background-color: #f4f4f4;
     height: 100vw;
+    overflow: hidden;
+}
+
+.image {
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    right: 8rem;
+    bottom: 7rem;
+    z-index: 1;
+    color: $captionColor;
+    font-family: $fontDancingScript;
+    font-size: 7.2rem;
 }
 
 @include tablet {
     .bannerModule {
-        height: 37vw;
+        height: 45vw;
     }
 }

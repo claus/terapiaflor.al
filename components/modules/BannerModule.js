@@ -3,16 +3,21 @@ import PropTypes from 'prop-types';
 
 import styles from './BannerModule.scss';
 
-const BannerModule = ({ title }) => {
+const BannerModule = ({ title, image }) => {
+    const { file } = image;
+    const { url, details } = file;
+    const { width, height } = details.image;
     return (
         <figure className={styles.bannerModule}>
-            <figcaption>{title}</figcaption>
+            <img className={styles.image} src={url} />
+            <figcaption className={styles.caption}>{title}</figcaption>
         </figure>
     );
 };
 
 BannerModule.propTypes = {
     title: PropTypes.string.isRequired,
+    image: PropTypes.object.isRequired,
 };
 
 export default BannerModule;

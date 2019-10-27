@@ -15,12 +15,14 @@
 
 .caption {
     position: absolute;
+    left: 8rem;
     right: 8rem;
     bottom: 7rem;
     z-index: 1;
     color: $captionColor;
     font-family: $fontDancingScript;
     font-size: 7.2rem;
+    text-align: right;
 }
 
 @include tablet {

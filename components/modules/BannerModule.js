@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import styles from './BannerModule.scss';
 
 const BannerModule = ({ title, image }) => {
-    console.log(image)
     const { title: alt, file } = image;
     // const { url, details } = file;
     // const { width, height } = details.image;

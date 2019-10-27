@@ -6,8 +6,8 @@
     "builds": [{ "src": "next.config.js", "use": "@now/next" }],
     "build": {
         "env": {
-            "CF_SPACE_ID": "@terapiafloral-cf-space-id",
-            "CF_DELIVERY_TOKEN": "@terapiafloral-cf-delivery-token"
+            "CONTENTFUL_SPACE_ID": "@contentful-space-id",
+            "CONTENTFUL_ACCESS_TOKEN": "@contentful-access-token"
         }
     }
 }

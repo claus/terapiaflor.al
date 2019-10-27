@@ -7,8 +7,8 @@
     font-style: normal;
     font-weight: 700;
     src: local('Dancing Script Bold'), local('DancingScript-Bold'),
-        url('/static/fonts/dancing-script-bold.woff2') format('woff2'),
-        url('/static/fonts/dancing-script-bold.woff') format('woff');
+        url('/fonts/dancing-script-bold.woff2') format('woff2'),
+        url('/fonts/dancing-script-bold.woff') format('woff');
 }
 
 @font-face {
@@ -16,8 +16,8 @@
     font-style: normal;
     font-weight: 700;
     src: local('Amatic SC Bold'), local('AmaticSC-Bold'),
-        url('/static/fonts/amatic-sc-bold.woff2') format('woff2'),
-        url('/static/fonts/amatic-sc-bold.woff') format('woff');
+        url('/fonts/amatic-sc-bold.woff2') format('woff2'),
+        url('/fonts/amatic-sc-bold.woff') format('woff');
 }
 
 @font-face {
@@ -25,8 +25,8 @@
     font-style: normal;
     font-weight: 700;
     src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'),
-        url('/static/fonts/roboto-slab-bold.woff2') format('woff2'),
-        url('/static/fonts/roboto-slab-bold.woff') format('woff');
+        url('/fonts/roboto-slab-bold.woff2') format('woff2'),
+        url('/fonts/roboto-slab-bold.woff') format('woff');
 }
 
 @font-face {
@@ -34,8 +34,8 @@
     font-style: normal;
     font-weight: 300;
     src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'),
-        url('/static/fonts/roboto-condensed-light.woff2') format('woff2'),
-        url('/static/fonts/roboto-condensed-light.woff') format('woff');
+        url('/fonts/roboto-condensed-light.woff2') format('woff2'),
+        url('/fonts/roboto-condensed-light.woff') format('woff');
 }
 
 @font-face {
@@ -43,8 +43,8 @@
     font-style: normal;
     font-weight: 400;
     src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
-        url('/static/fonts/roboto-condensed-regular.woff2') format('woff2'),
-        url('/static/fonts/roboto-condensed-regular.woff') format('woff');
+        url('/fonts/roboto-condensed-regular.woff2') format('woff2'),
+        url('/fonts/roboto-condensed-regular.woff') format('woff');
 }
 
 :global {

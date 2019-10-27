@@ -7,7 +7,7 @@ const Header = () => (
         <h1>
             <img
                 className={styles.logo}
-                src="/static/logo.svg"
+                src="/images/logo.svg"
                 role="img"
                 alt="Daniela Wahlers - Terapeuta Floral"
             />

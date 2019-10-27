@@ -1,0 +1,12 @@
+@import 'styles/breakpoints';
+
+.bannerModule {
+    background-color: #f4f4f4;
+    height: 100vw;
+}
+
+@include tablet {
+    .bannerModule {
+        height: 37vw;
+    }
+}

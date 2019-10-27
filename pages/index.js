@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { fetchLanding } from 'services';
 
-import PageMetadata from 'components/ui/PageMetadata';
-import BannerModule from 'components/ui/modules/BannerModule';
-import TextModule from 'components/ui/modules/TextModule';
+import PageMetadata from 'components/PageMetadata';
+import BannerModule from 'components/modules/BannerModule';
+import TextModule from 'components/modules/TextModule';
 
 import styles from './index.scss';
 

@@ -2,9 +2,9 @@ import './styles/normalize.scss';
 import './styles/theme.scss';
 
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Head from 'next/head';
-import Header from 'components/ui/Header';
+import Header from 'components/Header';
 
 class TerapiaFloralApp extends App {
     renderHead() {
@@ -19,9 +19,9 @@ class TerapiaFloralApp extends App {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://terapiaflor.al" />
                 <link rel="canonical" href="https://terapiaflor.al" />
-                <link rel="icon" href="/static/favicon-32.png" sizes="32x32" />
-                <link rel="icon" href="/static/favicon-64.png" sizes="64x64" />
-                <link rel="icon" href="/static/favicon-128.png" sizes="128x128" />
+                <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
+                <link rel="icon" href="/images/favicon-64.png" sizes="64x64" />
+                <link rel="icon" href="/images/favicon-128.png" sizes="128x128" />
             </Head>
         );
     }
@@ -29,13 +29,11 @@ class TerapiaFloralApp extends App {
     render() {
         const { Component, pageProps } = this.props;
         return (
-            <Container>
+            <main>
                 {this.renderHead()}
-                <main>
-                    <Header />
-                    <Component {...pageProps} />
-                </main>
-            </Container>
+                <Header />
+                <Component {...pageProps} />
+            </main>
         );
     }
 }

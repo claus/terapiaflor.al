@@ -1,11 +1,9 @@
 {
     "presets": [
-        "next/babel",
         [
-            "@babel/preset-env",
+            "next/babel",
             {
-                "corejs": "2",
-                "useBuiltIns": "entry"
+                "preset-env": { "targets": { "node": "current" } }
             }
         ]
     ],
@@ -22,7 +20,7 @@
                     "styles": "./styles",
                     "utils": "./utils",
                     "hooks": "./hooks",
-                    "services": "./services",
+                    "services": "./services"
                 }
             }
         ]

@@ -5,11 +5,9 @@ import styles from './BannerModule.scss';
 
 const BannerModule = ({ title }) => {
     return (
-        <section className={styles.bannerModule}>
-            <figure>
-                <figcaption>{title}</figcaption>
-            </figure>
-        </section>
+        <figure className={styles.bannerModule}>
+            <figcaption>{title}</figcaption>
+        </figure>
     );
 };
 

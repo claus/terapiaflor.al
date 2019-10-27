@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import WhatsAppButton from 'components/ui/WhatsAppButton';
+import WhatsAppButton from 'components/WhatsAppButton';
 
 import styles from './TextModule.scss';
 

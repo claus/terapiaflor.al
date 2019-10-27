@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import styles from './BannerModule.scss';
 
 const BannerModule = ({ title, image }) => {
-    const { file } = image;
-    const { url, details } = file;
-    const { width, height } = details.image;
+    console.log(image)
+    const { title: alt, file } = image;
+    // const { url, details } = file;
+    // const { width, height } = details.image;
     return (
         <figure className={styles.bannerModule}>
-            <img className={styles.image} src={url} />
+            <img className={styles.image} src={file.url} alt={alt} />
             <figcaption className={styles.caption}>{title}</figcaption>
         </figure>
     );

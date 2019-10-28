@@ -43,6 +43,15 @@
     }
 
     .caption {
+        left: 5rem;
+        right: 5rem;
+        bottom: 4rem;
+        font-size: 5rem;
+    }
+}
+
+@include desktop {
+    .caption {
         left: 8rem;
         right: 8rem;
         bottom: 7rem;

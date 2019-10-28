@@ -24,7 +24,7 @@ export async function fetchAll(type, query = {}) {
         return [];
     }
     const items = results.items;
-    for (let key in items) {
+    for (var key in items) {
         items[key] = cleanupContentfulData(items[key]);
     }
     return items;
@@ -74,12 +74,12 @@ function cleanupContentfulData(data) {
         }
         data = data.fields;
     }
-    for (let key in data) {
+    for (var key in data) {
         let child = data[key];
         if (child.fields) {
             data[key] = cleanupContentfulData(child);
         } else if (Array.isArray(child)) {
-            for (let childKey in child) {
+            for (var childKey in child) {
                 let grandchild = child[childKey];
                 if (grandchild.fields) {
                     child[childKey] = cleanupContentfulData(grandchild);

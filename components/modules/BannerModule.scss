@@ -10,7 +10,19 @@
 }
 
 .image {
+    --min: calc(var(--top) + var(--height));
+    --max: calc(var(--top) - var(--winheight));
+    --nominator: calc(var(--scrolltop) - var(--min));
+    --denominator: calc(var(--max) - var(--min));
+    --percent: calc(100% * var(--nominator) / var(--denominator));
     display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% var(--percent);
 }
 
 .caption {

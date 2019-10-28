@@ -1,34 +1,35 @@
 import { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { testIfSupportsPassive } from 'utils';
 
-const ScrollTop = ({ varName = '--scroll-top' }) => {
+const ScrollTop = () => {
     useEffect(() => {
         const supportsPassive = testIfSupportsPassive();
-        const handleScroll = () => {
-            document.documentElement.style.setProperty(
-                varName,
-                `${document.scrollingElement.scrollTop}px`
-            );
+        const docEl = document.documentElement;
+        const scrollEl = document.scrollingElement;
+        const handleResize = () => {
+            docEl.style.setProperty('--winheight', window.innerHeight);
         };
+        const handleScroll = () => {
+            docEl.style.setProperty('--scrolltop', scrollEl.scrollTop);
+        };
+        handleResize();
+        handleScroll();
+        window.addEventListener('resize', handleResize);
         window.addEventListener(
             'scroll',
             handleScroll,
             supportsPassive ? { passive: true } : false
         );
         return () => {
+            window.removeEventListener('resize', handleResize);
             window.removeEventListener(
                 'scroll',
                 handleScroll,
                 supportsPassive ? { passive: true } : false
             );
         };
-    }, [varName]);
+    }, []);
     return null;
-};
-
-ScrollTop.propTypes = {
-    varName: PropTypes.string,
 };
 
 export default ScrollTop;

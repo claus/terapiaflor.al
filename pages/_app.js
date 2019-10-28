@@ -34,7 +34,7 @@ class TerapiaFloralApp extends App {
                 {this.renderHead()}
                 <Header />
                 <Component {...pageProps} />
-                <ScrollTop varName="--scroll-top" />
+                <ScrollTop />
             </main>
         );
     }

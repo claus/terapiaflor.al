@@ -25,12 +25,20 @@ function useResizeObserver() {
     return refFn;
 }
 
-const BannerModule = ({ title, image }) => {
-    const { file, title: alt } = image;
+const BannerModule = ({ title, image, imageMobile }) => {
+    const { file: fileDesktop, title: alt } = image;
+    const { file: fileMobile } = imageMobile;
+    const getSrcSet = file => `${file.url} ${file.details.image.width}w`;
     const rootRef = useResizeObserver();
     return (
         <figure className={styles.bannerModule} ref={rootRef}>
-            <img className={styles.image} src={file.url} alt={alt} />
+            <img
+                className={styles.image}
+                srcSet={`${getSrcSet(fileMobile)}, ${getSrcSet(fileDesktop)}`}
+                sizes={`(max-width: 719px) 100vw, 100vw`}
+                src={`${fileDesktop.url}`}
+                alt={alt}
+            />
             <figcaption className={styles.caption}>{title}</figcaption>
         </figure>
     );
@@ -39,6 +47,7 @@ const BannerModule = ({ title, image }) => {
 BannerModule.propTypes = {
     title: PropTypes.string.isRequired,
     image: PropTypes.object.isRequired,
+    imageMobile: PropTypes.object.isRequired,
 };
 
 export default BannerModule;

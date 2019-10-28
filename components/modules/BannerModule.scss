@@ -5,7 +5,7 @@
 .bannerModule {
     position: relative;
     background-color: #f4f4f4;
-    height: 100vw;
+    height: 70vw;
     overflow: hidden;
 }
 
@@ -27,18 +27,25 @@
 
 .caption {
     position: absolute;
-    left: 8rem;
-    right: 8rem;
-    bottom: 7rem;
+    left: 2rem;
+    right: 2rem;
+    bottom: 2rem;
     z-index: 1;
     color: $captionColor;
     font-family: $fontDancingScript;
-    font-size: 7.2rem;
+    font-size: 3rem;
     text-align: right;
 }
 
 @include tablet {
     .bannerModule {
         height: 45vw;
+    }
+
+    .caption {
+        left: 8rem;
+        right: 8rem;
+        bottom: 7rem;
+        font-size: 7.2rem;
     }
 }

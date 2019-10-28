@@ -1,5 +1,6 @@
 @import 'styles/fonts';
 @import 'styles/colors';
+@import 'styles/breakpoints';
 
 .textModule {
     padding: 0 0 5rem 8rem;
@@ -44,4 +45,7 @@
     .button {
         margin-left: 2rem;
     }
+}
+
+@include tablet {
 }

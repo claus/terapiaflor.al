@@ -13,7 +13,7 @@ function useResizeObserver() {
         }
         if (node !== null) {
             ref.current = new ResizeObserver(entries => {
-                if (entries && entries.length && entries[0].target) {
+                if (entries && entries.length) {
                     const { target, contentRect } = entries[0];
                     target.style.setProperty('--top', target.offsetTop);
                     target.style.setProperty('--height', contentRect.height);
@@ -28,17 +28,30 @@ function useResizeObserver() {
 const BannerModule = ({ title, image, imageMobile }) => {
     const { file: fileDesktop, title: alt } = image;
     const { file: fileMobile } = imageMobile;
-    const getSrcSet = file => `${file.url} ${file.details.image.width}w`;
     const rootRef = useResizeObserver();
+    const src = (file, media, size) => (
+        <>
+            <source
+                type="image/webp"
+                media={media}
+                srcSet={`${file.url}?w=${size}&fm=webp`}
+            />
+            <source
+                type="image/jpeg"
+                media={media}
+                srcSet={`${file.url}?w=${size}`}
+            />
+        </>
+    );
     return (
         <figure className={styles.bannerModule} ref={rootRef}>
-            <img
-                className={styles.image}
-                srcSet={`${getSrcSet(fileMobile)}, ${getSrcSet(fileDesktop)}`}
-                sizes={`(max-width: 719px) 100vw, 100vw`}
-                src={`${fileDesktop.url}`}
-                alt={alt}
-            />
+            <picture>
+                {src(fileMobile, '(max-width: 512px)', 512)}
+                {src(fileMobile, '(max-width: 719px)', 1024)}
+                {src(fileDesktop, '(max-width: 1499px)', 1500)}
+                {src(fileDesktop, '(min-width: 1500px)', 2500)}
+                <img src={fileDesktop.url} alt={alt} className={styles.image} />
+            </picture>
             <figcaption className={styles.caption}>{title}</figcaption>
         </figure>
     );

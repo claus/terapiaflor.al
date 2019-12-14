@@ -15,8 +15,10 @@ function useResizeObserver() {
             ref.current = new ResizeObserver(entries => {
                 if (entries && entries.length) {
                     const { target, contentRect } = entries[0];
+                    const height = Math.round(contentRect.height);
                     target.style.setProperty('--top', target.offsetTop);
-                    target.style.setProperty('--height', contentRect.height);
+                    target.style.setProperty('--height', height);
+                    target.style.setProperty('visibility', 'visible');
                 }
             });
             ref.current.observe(node);

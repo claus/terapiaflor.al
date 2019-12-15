@@ -8,7 +8,7 @@ import styles from './TextModule.scss';
 
 const TextModule = ({ title, text, whatsappButtonLabel, themeColor }) => {
     const theme = {
-        color: themeColor,
+        '--theme-color': themeColor,
     };
     return (
         <article style={theme} className={styles.textModule}>

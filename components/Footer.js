@@ -28,9 +28,9 @@ const Footer = () => (
             </div>
         </dl>
         <div className={styles.hearts}>
-            <img src="/images/heart1.svg" />
-            <img src="/images/heart2.svg" />
-            <img src="/images/heart3.svg" />
+            <img src="/images/heart1.svg" role="img" alt="LGBTQ" />
+            <img src="/images/heart2.svg" role="img" alt="Transgender" />
+            <img src="/images/heart3.svg" role="img" alt="Nonbinary" />
         </div>
     </footer>
 );

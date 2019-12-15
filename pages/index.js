@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import { fetchLanding } from 'services';
 
 import PageMetadata from 'components/PageMetadata';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import BannerModule from 'components/modules/BannerModule';
 import TextModule from 'components/modules/TextModule';
-
-import styles from './index.scss';
 
 const Landing = ({ landing }) => {
     const { title, subtitle, description, image } = landing.metadata;
@@ -29,9 +27,7 @@ const Landing = ({ landing }) => {
                 }
                 return null;
             })}
-            <Link href="/about">
-                <a className={styles.link}>Go to About Me</a>
-            </Link>
+            <Footer />
         </>
     );
 };

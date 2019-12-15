@@ -4,7 +4,6 @@ import './styles/theme.scss';
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import Header from 'components/Header';
 import ScrollTop from 'components/ScrollTop';
 
 class TerapiaFloralApp extends App {
@@ -32,7 +31,6 @@ class TerapiaFloralApp extends App {
         return (
             <main>
                 {this.renderHead()}
-                <Header />
                 <Component {...pageProps} />
                 <ScrollTop />
             </main>

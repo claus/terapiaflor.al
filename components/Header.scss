@@ -1,9 +1,52 @@
+@import 'styles/fonts';
+@import 'styles/colors';
+@import 'styles/breakpoints';
+
 .header {
-    padding: 1rem 0;
+    padding: 2rem 0;
     text-align: center;
 }
 
 .logo {
-    width: 19.6rem;
-    height: 6.9rem;
+    width: 24rem;
+}
+
+.subtitle {
+    display: block;
+    margin: 1.5rem 0;
+    font-family: $fontRobotoSlab;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: $textColor;
+}
+
+
+@include tablet {
+    .header {
+        padding: 2rem 0;
+    }
+
+    .logo {
+        width: 26rem;
+    }
+
+    .subtitle {
+        margin: 1.5rem 0;
+        font-size: 1.6rem;
+    }
+    }
+
+@include desktop {
+    .header {
+        padding: 3rem 0;
+    }
+
+    .logo {
+        width: 37rem;
+    }
+
+    .subtitle {
+        margin: 2.5rem 0;
+        font-size: 2rem;
+    }
 }

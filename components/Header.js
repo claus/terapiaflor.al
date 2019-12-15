@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Header.scss';
 
-const Header = () => (
+const Header = ({ subtitle }) => (
     <header className={styles.header}>
         <h1>
             <img
@@ -11,8 +12,13 @@ const Header = () => (
                 role="img"
                 alt="Daniela Wahlers - Terapeuta Floral"
             />
+            <span className={styles.subtitle}>{subtitle}</span>
         </h1>
     </header>
 );
+
+Header.propTypes = {
+    subtitle: PropTypes.string.isRequired,
+};
 
 export default Header;

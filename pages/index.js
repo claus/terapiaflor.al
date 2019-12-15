@@ -4,13 +4,14 @@ import Link from 'next/link';
 import { fetchLanding } from 'services';
 
 import PageMetadata from 'components/PageMetadata';
+import Header from 'components/Header';
 import BannerModule from 'components/modules/BannerModule';
 import TextModule from 'components/modules/TextModule';
 
 import styles from './index.scss';
 
 const Landing = ({ landing }) => {
-    const { title, description, image } = landing.metadata;
+    const { title, subtitle, description, image } = landing.metadata;
     return (
         <>
             <PageMetadata
@@ -18,6 +19,7 @@ const Landing = ({ landing }) => {
                 description={description}
                 image={image}
             />
+            <Header subtitle={subtitle} />
             {landing.modules.map(({ _contentTypeId, _id, ...props }) => {
                 switch (_contentTypeId) {
                     case 'bannerModule':

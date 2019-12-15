@@ -3,18 +3,66 @@
 @import 'styles/breakpoints';
 
 .footer {
-    padding: 2rem 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 3rem;
+    background-color: #c8dda1;
+    line-height: 1.4;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #555;
+    a {
+        color: #555;
+        @media (hover: hover) {
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+.contact {
+    margin: 0;
+    flex: 1;
+    .item {
+        color: currentColor;
+        dd {
+            margin-left: 0;
+        }
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.hearts {
+    margin-top: 2.5rem;
+    > img {
+        width: 4rem;
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
 }
 
 @include tablet {
     .footer {
-        padding: 2rem 0;
+        flex-direction: row;
+        padding: 3rem 8rem;
+    }
+    .hearts {
+        > img {
+            width: 5rem;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
     }
 }
 
 @include desktop {
     .footer {
-        padding: 3rem 0;
+        padding: 4rem 8rem;
     }
 }

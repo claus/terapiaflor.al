@@ -1,4 +1,4 @@
-export function testIfSupportsPassive() {
+export function supportsPassive() {
     var supportsPassive = false;
     try {
         var opts = Object.defineProperty({}, 'passive', {

@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import { testIfSupportsPassive } from 'utils';
+import { supportsPassive } from 'utils';
 
 const ScrollTop = () => {
     useEffect(() => {
-        const supportsPassive = testIfSupportsPassive();
+        const passive = supportsPassive() ? { passive: true } : false;
         const docEl = document.documentElement;
         const scrollEl = document.scrollingElement;
         const handleResize = () => {
@@ -15,18 +15,10 @@ const ScrollTop = () => {
         handleResize();
         handleScroll();
         window.addEventListener('resize', handleResize);
-        window.addEventListener(
-            'scroll',
-            handleScroll,
-            supportsPassive ? { passive: true } : false
-        );
+        window.addEventListener('scroll', handleScroll, passive);
         return () => {
             window.removeEventListener('resize', handleResize);
-            window.removeEventListener(
-                'scroll',
-                handleScroll,
-                supportsPassive ? { passive: true } : false
-            );
+            window.removeEventListener('scroll', handleScroll, passive);
         };
     }, []);
     return null;

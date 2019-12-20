@@ -50,7 +50,12 @@ const BannerModule = ({ title, image, imageMobile }) => {
                 {src(fileMobile, '(max-width: 719px)', 1024)}
                 {src(fileDesktop, '(max-width: 1499px)', 1500)}
                 {src(fileDesktop, '(min-width: 1500px)', 2500)}
-                <img src={fileDesktop.url} alt={alt} className={styles.image} />
+                <img
+                    src={fileDesktop.url}
+                    alt={alt}
+                    className={styles.image}
+                    loading="lazy"
+                />
             </picture>
             <figcaption className={styles.caption}>{title}</figcaption>
         </figure>

@@ -5,26 +5,24 @@ import ResizeObserver from 'resize-observer-polyfill';
 import styles from './BannerModule.scss';
 
 function useResizeObserver() {
-    const ref = useRef(null);
-    const refFn = useCallback(node => {
-        if (ref.current) {
-            ref.current.disconnect();
-            ref.current = null;
+    const observer = useRef(null);
+    return useCallback(node => {
+        if (observer.current) {
+            observer.current.disconnect();
+            observer.current = null;
         }
         if (node !== null) {
-            ref.current = new ResizeObserver(entries => {
-                if (entries && entries.length) {
-                    const { target, contentRect } = entries[0];
+            observer.current = new ResizeObserver(
+                ([{ target, contentRect }]) => {
                     const height = Math.round(contentRect.height);
                     target.style.setProperty('--top', target.offsetTop);
                     target.style.setProperty('--height', height);
                     target.style.setProperty('visibility', 'visible');
                 }
-            });
-            ref.current.observe(node);
+            );
+            observer.current.observe(node);
         }
     }, []);
-    return refFn;
 }
 
 const BannerModule = ({ title, image, imageMobile }) => {

@@ -13,6 +13,7 @@ const WhatsAppButton = ({ label, className }) => {
             className={cx(styles.whatsAppButton, className)}
         >
             {label}
+            <span className={styles.arrow}>→</span>
         </a>
     );
 };

@@ -11,11 +11,27 @@
     text-transform: uppercase;
     text-decoration: none;
     color: var(--theme-color);
+    transition: all 0.2s;
 
     @media (hover: hover) {
         &:hover {
             background-color: var(--theme-color);
             color: #fff;
         }
+    }
+
+    .arrow {
+        display: inline-block;
+        margin-left: 0.5rem;
+        animation: woopwoop 0.5s ease-out infinite alternate;
+    }
+}
+
+@keyframes woopwoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0.5rem);
     }
 }

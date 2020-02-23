@@ -31,6 +31,9 @@ const Footer = () => (
             <img src="/images/heart2.svg" role="img" alt="Transgender" />
             <img src="/images/heart3.svg" role="img" alt="Nonbinary" />
         </div>
+        <div className={styles.hidden}>
+            <a rel="me" href="https://mastodon.social/@DaniWahlers"></a>
+        </div>
     </footer>
 );
 

@@ -32,7 +32,12 @@ const Footer = () => (
             <img src="/images/heart3.svg" role="img" alt="Nonbinary" />
         </div>
         <div className={styles.hidden}>
-            <a rel="me" href="https://mastodon.social/@DaniWahlers"></a>
+            <a rel="me" href="https://mastodon.social/@DaniWahlers">
+                mastodon.social
+            </a>
+            <a rel="me" href="https://mastodon.com.br/@dani">
+                mastodon.com.br
+            </a>
         </div>
     </footer>
 );

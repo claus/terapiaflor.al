@@ -1,7 +1,6 @@
 {
     "version": 2,
     "regions": ["gru1"],
-    "name": "terapiaflor.al",
     "builds": [{ "src": "next.config.js", "use": "@now/next" }],
     "build": {
         "env": {

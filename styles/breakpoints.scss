@@ -44,10 +44,3 @@ $hugeDesktop: 1920px;
         @content;
     }
 }
-
-:export {
-    tablet: $tablet;
-    desktop: $desktop;
-    largeDesktop: $largeDesktop;
-    hugeDesktop: $hugeDesktop;
-}

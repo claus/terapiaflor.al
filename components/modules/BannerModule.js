@@ -2,7 +2,7 @@ import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
 
-import styles from './BannerModule.scss';
+import styles from './BannerModule.module.scss';
 
 function useResizeObserver() {
     const observer = useRef(null);

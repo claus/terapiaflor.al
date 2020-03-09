@@ -1,5 +1,5 @@
-import './styles/normalize.scss';
-import './styles/theme.scss';
+import 'components/styles/normalize.scss';
+import 'components/styles/theme.scss';
 
 import React from 'react';
 import App from 'next/app';

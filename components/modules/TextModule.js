@@ -4,7 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import WhatsAppButton from 'components/WhatsAppButton';
 
-import styles from './TextModule.scss';
+import styles from './TextModule.module.scss';
 
 const TextModule = ({ title, text, whatsappButtonLabel, themeColor }) => {
     const theme = {

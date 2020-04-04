@@ -7,6 +7,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import BannerModule from 'components/modules/BannerModule';
 import TextModule from 'components/modules/TextModule';
+import LandingModule from 'components/modules/LandingModule';
 
 const Landing = ({ landing }) => {
     const { title, subtitle, description, image } = landing.metadata;
@@ -24,6 +25,8 @@ const Landing = ({ landing }) => {
                         return <BannerModule {...props} key={_id} />;
                     case 'textModule':
                         return <TextModule {...props} key={_id} />;
+                    case 'landingModule':
+                        return <LandingModule {...props} key={_id} />;
                 }
                 return null;
             })}

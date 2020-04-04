@@ -1,0 +1,127 @@
+@import 'styles/fonts';
+@import 'styles/colors';
+@import 'styles/breakpoints';
+
+.landingModule {
+    //
+}
+
+.bannerModule {
+    position: relative;
+    background-color: #f4f4f4;
+    height: 70vw;
+    overflow: hidden;
+    visibility: hidden;
+
+    .image {
+        --min: calc(var(--top) + var(--height));
+        --max: calc(var(--top) - var(--winheight));
+        --nominator: calc(var(--scrolltop) - var(--min));
+        --denominator: calc(var(--max) - var(--min));
+        --percent: calc(100% * var(--nominator) / var(--denominator));
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% var(--percent);
+    }
+
+    .caption {
+        position: absolute;
+        left: 2rem;
+        right: 2rem;
+        bottom: 2.5rem;
+        z-index: 1;
+        color: $captionColor;
+        font-family: $fontDancingScript;
+        font-size: 3rem;
+        text-align: right;
+    }
+}
+
+.textModule {
+    padding: 0 1rem 4rem 3rem;
+    font-family: $fontRobotoCondensed;
+    color: var(--theme-color);
+
+    .textContainer {
+        margin-bottom: 2rem;
+        padding: 2.5rem 2rem 0.5rem 2rem;
+        border-left: 1px solid var(--theme-color);
+    }
+
+    .headline {
+        margin-bottom: 1.5rem;
+        font-family: $fontAmatic;
+        font-weight: 400;
+        font-size: 4rem;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+    }
+
+    h3 {
+        max-width: 50rem;
+        margin-bottom: 1.75rem;
+        line-height: 1.4;
+        font-family: $fontRobotoSlab;
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: $textColor;
+
+        i {
+            font-style: normal;
+            font-size: 1.05em;
+        }
+    }
+
+    p {
+        max-width: 64rem;
+        margin-bottom: 1.4rem;
+        color: $textColor;
+        line-height: 1.4;
+    }
+
+    .button {
+        margin-right: 2rem;
+    }
+}
+
+@include tablet {
+    .bannerModule {
+        height: 45vw;
+        .caption {
+            left: 5rem;
+            right: 5rem;
+            bottom: 4rem;
+            font-size: 5rem;
+        }
+    }
+    .textModule {
+        padding: 0 12rem 5rem 8rem;
+        .textContainer {
+            margin-bottom: 3rem;
+            padding: 4.5rem 1rem 0.5rem 2rem;
+        }
+        .headline {
+            font-size: 4.8rem;
+            line-height: 1.2;
+        }
+    }
+}
+
+@include desktop {
+    .bannerModule {
+        .caption {
+            left: 8rem;
+            right: 8rem;
+            bottom: 7rem;
+            font-size: 7.2rem;
+        }
+    }
+    .textModule {
+        padding: 0 3rem 5rem 8rem;
+    }
+}

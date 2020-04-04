@@ -5,8 +5,6 @@ import { fetchLanding } from 'services';
 import PageMetadata from 'components/PageMetadata';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import BannerModule from 'components/modules/BannerModule';
-import TextModule from 'components/modules/TextModule';
 import LandingModule from 'components/modules/LandingModule';
 
 const Landing = ({ landing }) => {
@@ -21,10 +19,6 @@ const Landing = ({ landing }) => {
             <Header subtitle={subtitle} />
             {landing.modules.map(({ _contentTypeId, _id, ...props }) => {
                 switch (_contentTypeId) {
-                    case 'bannerModule':
-                        return <BannerModule {...props} key={_id} />;
-                    case 'textModule':
-                        return <TextModule {...props} key={_id} />;
                     case 'landingModule':
                         return <LandingModule {...props} key={_id} />;
                 }

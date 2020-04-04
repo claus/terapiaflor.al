@@ -74,7 +74,7 @@ const LandingModule = ({
                 </picture>
                 <figcaption className={styles.caption}>{imageTitle}</figcaption>
             </figure>
-            <article style={theme} className={styles.textModule}>
+            <div style={theme} className={styles.textModule}>
                 <div className={styles.textContainer}>
                     <h2 className={styles.headline}>{title}</h2>
                     {documentToReactComponents(text)}
@@ -83,7 +83,7 @@ const LandingModule = ({
                     label={whatsappButtonLabel}
                     className={styles.button}
                 />
-            </article>
+            </div>
         </section>
     );
 };

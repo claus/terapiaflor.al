@@ -32,22 +32,16 @@ const Landing = ({ landing }) => {
     );
 };
 
-Landing.getInitialProps = async ({ res }) => {
-    const landing = await fetchLanding();
-    const etag = require('crypto')
-        .createHash('md5')
-        .update(JSON.stringify(landing))
-        .digest('hex');
-    if (res) {
-        res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate');
-        res.setHeader('X-version', etag);
-    }
-    return { landing, etag };
-};
-
 Landing.propTypes = {
     landing: PropTypes.object.isRequired,
-    etag: PropTypes.string.isRequired,
 };
+
+export async function getStaticProps() {
+    return {
+        props: {
+            landing: await fetchLanding(),
+        },
+    };
+}
 
 export default Landing;
